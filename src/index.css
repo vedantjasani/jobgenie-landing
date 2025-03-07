@@ -14,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 211 100% 50%;
+    --primary: 221 80% 53%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -31,7 +31,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 211 100% 50%;
+    --ring: 221 80% 53%;
 
     --radius: 0.75rem;
 
@@ -127,6 +127,25 @@
 
   .feature-card:hover {
     @apply transform -translate-y-1 shadow-medium;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-jobfix-500 to-jobfix-700;
+  }
+
+  /* Gradient buttons */
+  .gradient-button {
+    @apply bg-gradient-to-r from-jobfix-500 to-jobfix-700 hover:from-jobfix-600 hover:to-jobfix-800 text-white transition-all duration-300;
+  }
+
+  /* Card hover effects */
+  .hover-card {
+    @apply transition-all duration-300;
+  }
+  
+  .hover-card:hover {
+    @apply shadow-medium transform -translate-y-1;
   }
 
   /* Smooth scroll */
