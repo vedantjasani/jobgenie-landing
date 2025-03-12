@@ -25,18 +25,18 @@ const testimonials = [
 const partnerLogos = [
   { 
     name: "LinkedIn", 
-    logo: "/partner-logos/linkedin.svg",
-    class: "w-28 h-10 opacity-70 hover:opacity-100 transition-opacity duration-300" 
+    logo: "/lovable-uploads/2fb32913-f879-4c77-9df6-fb4e2f9fca70.png",
+    class: "w-32 h-10 opacity-80 hover:opacity-100 transition-opacity duration-300" 
   },
   { 
     name: "Indeed", 
-    logo: "/partner-logos/indeed.svg",
-    class: "w-24 h-10 opacity-70 hover:opacity-100 transition-opacity duration-300" 
+    logo: "/lovable-uploads/57f751fa-92be-45ef-a0d4-b93d3072b26f.png",
+    class: "w-28 h-10 opacity-80 hover:opacity-100 transition-opacity duration-300" 
   },
   { 
     name: "Glassdoor", 
-    logo: "/partner-logos/glassdoor.svg",
-    class: "w-32 h-10 opacity-70 hover:opacity-100 transition-opacity duration-300" 
+    logo: "/lovable-uploads/50caee2b-663e-4fac-b784-cfed6cce568e.png",
+    class: "w-32 h-10 opacity-80 hover:opacity-100 transition-opacity duration-300" 
   },
   { 
     name: "ZipRecruiter", 
@@ -88,7 +88,7 @@ const Testimonials: React.FC = () => {
                   <Image 
                     src={logo.logo} 
                     alt={`${logo.name} logo`} 
-                    width={logo.name === 'LinkedIn' || logo.name === 'Indeed' ? 120 : 140}
+                    width={logo.name === 'LinkedIn' ? 140 : logo.name === 'Indeed' ? 130 : 120}
                     height={40}
                     className="h-full w-full object-contain"
                   />
