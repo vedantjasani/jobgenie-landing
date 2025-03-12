@@ -2,6 +2,7 @@
 import React from 'react';
 import TestimonialCard from '@/components/common/TestimonialCard';
 import FadeIn from '@/components/ui/FadeIn';
+import { Image } from '@/components/ui/image';
 
 const testimonials = [
   {
@@ -22,10 +23,26 @@ const testimonials = [
 ];
 
 const partnerLogos = [
-  { name: "LinkedIn", class: "w-28 h-10 opacity-70 hover:opacity-100 transition-opacity duration-300" },
-  { name: "Indeed", class: "w-24 h-10 opacity-70 hover:opacity-100 transition-opacity duration-300" },
-  { name: "Glassdoor", class: "w-32 h-10 opacity-70 hover:opacity-100 transition-opacity duration-300" },
-  { name: "ZipRecruiter", class: "w-32 h-10 opacity-70 hover:opacity-100 transition-opacity duration-300" },
+  { 
+    name: "LinkedIn", 
+    logo: "/partner-logos/linkedin.svg",
+    class: "w-28 h-10 opacity-70 hover:opacity-100 transition-opacity duration-300" 
+  },
+  { 
+    name: "Indeed", 
+    logo: "/partner-logos/indeed.svg",
+    class: "w-24 h-10 opacity-70 hover:opacity-100 transition-opacity duration-300" 
+  },
+  { 
+    name: "Glassdoor", 
+    logo: "/partner-logos/glassdoor.svg",
+    class: "w-32 h-10 opacity-70 hover:opacity-100 transition-opacity duration-300" 
+  },
+  { 
+    name: "ZipRecruiter", 
+    logo: "/partner-logos/ziprecruiter.svg",
+    class: "w-32 h-10 opacity-70 hover:opacity-100 transition-opacity duration-300" 
+  },
 ];
 
 const Testimonials: React.FC = () => {
@@ -68,7 +85,9 @@ const Testimonials: React.FC = () => {
             {partnerLogos.map((logo, index) => (
               <FadeIn key={index} delay={0.1 * index}>
                 <div className={logo.class}>
-                  <div className="h-full w-full bg-muted rounded-md"></div>
+                  <div className="flex items-center justify-center h-full w-full">
+                    <div className="text-gray-400 font-semibold">{logo.name}</div>
+                  </div>
                 </div>
               </FadeIn>
             ))}
