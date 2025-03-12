@@ -85,9 +85,13 @@ const Testimonials: React.FC = () => {
             {partnerLogos.map((logo, index) => (
               <FadeIn key={index} delay={0.1 * index}>
                 <div className={logo.class}>
-                  <div className="flex items-center justify-center h-full w-full">
-                    <div className="text-gray-400 font-semibold">{logo.name}</div>
-                  </div>
+                  <Image 
+                    src={logo.logo} 
+                    alt={`${logo.name} logo`} 
+                    width={logo.name === 'LinkedIn' || logo.name === 'Indeed' ? 120 : 140}
+                    height={40}
+                    className="h-full w-full object-contain"
+                  />
                 </div>
               </FadeIn>
             ))}
