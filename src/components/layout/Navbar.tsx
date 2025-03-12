@@ -27,13 +27,18 @@ const Navbar = () => {
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
       isScrolled 
-        ? "bg-white/80 backdrop-blur-md shadow-sm py-3" 
+        ? "bg-white/80 backdrop-blur-md shadow-sm py-3 dark:bg-jobfix-900/80" 
         : "bg-transparent py-5"
     )}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <a href="#" className="flex items-center">
-            <span className="text-xl font-bold text-jobfix-700">jobfix<span className="text-jobfix-500">.ai</span></span>
+            <img 
+              src="/lovable-uploads/61a2ae97-5eb9-4749-9f10-377cb20c0e56.png" 
+              alt="JobFix.ai" 
+              className="h-8 mr-2" 
+            />
+            <span className="text-xl font-bold text-jobfix-900 dark:text-white">jobfix<span className="text-jobfix-600">.ai</span></span>
           </a>
 
           {/* Desktop Navigation */}
@@ -47,14 +52,14 @@ const Navbar = () => {
             <a href="#faq" className="text-sm font-medium text-foreground/80 hover:text-jobfix-600 transition-colors">
               FAQ
             </a>
-            <Button asChild className="bg-jobfix-500 hover:bg-jobfix-600 text-white">
+            <Button asChild className="bg-jobfix-600 hover:bg-jobfix-700 text-white">
               <a href="#waitlist">Join Waitlist</a>
             </Button>
           </nav>
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-gray-700"
+            className="md:hidden text-gray-700 dark:text-white"
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >
@@ -66,7 +71,7 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       <div 
         className={cn(
-          "md:hidden absolute top-full left-0 right-0 bg-white shadow-md transition-all duration-300 ease-in-out overflow-hidden",
+          "md:hidden absolute top-full left-0 right-0 bg-white dark:bg-jobfix-900 shadow-md transition-all duration-300 ease-in-out overflow-hidden",
           mobileMenuOpen ? "max-h-[400px] border-t" : "max-h-0"
         )}
       >
@@ -94,7 +99,7 @@ const Navbar = () => {
           </a>
           <Button 
             asChild 
-            className="w-full bg-jobfix-500 hover:bg-jobfix-600 text-white"
+            className="w-full bg-jobfix-600 hover:bg-jobfix-700 text-white"
             onClick={() => setMobileMenuOpen(false)}
           >
             <a href="#waitlist">Join Waitlist</a>
