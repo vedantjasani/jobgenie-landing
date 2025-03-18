@@ -54,7 +54,7 @@ const WaitlistForm = ({
           placeholder={placeholderText}
           required
           disabled={loading || submitted}
-          className="w-full h-12 px-4 placeholder:text-muted-foreground/70 border-2 focus:border-jobfix-400 focus:ring-jobfix-300/20 transition-all duration-200 dark:bg-jobfix-700 dark:border-jobfix-600"
+          className="w-full h-12 px-4 placeholder:text-muted-foreground/70 border-2 focus:border-jobfix-500 focus:ring-jobfix-300/20 transition-all duration-200 dark:bg-jobfix-700 dark:border-jobfix-600"
           style={{ WebkitAppearance: 'none' }}
         />
       </div>
@@ -63,7 +63,7 @@ const WaitlistForm = ({
         size={buttonFullWidth ? "default" : "lg"}
         disabled={loading || submitted}
         className={cn(
-          "h-12 bg-jobfix-400 hover:bg-jobfix-500 text-white transition-all duration-200",
+          "h-12 bg-jobfix-800 hover:bg-jobfix-700 text-white transition-all duration-200",
           buttonFullWidth ? "w-full" : "sm:w-auto"
         )}
       >

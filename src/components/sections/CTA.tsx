@@ -49,7 +49,7 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
       ].map((item, index) => (
         <div key={index} className="flex flex-col items-center">
           <div className="w-16 h-16 md:w-20 md:h-20 bg-white dark:bg-jobfix-700 border border-jobfix-200 dark:border-jobfix-600 rounded-xl flex items-center justify-center shadow-soft">
-            <span className="text-2xl md:text-3xl font-mono font-semibold text-jobfix-600 dark:text-jobfix-200">
+            <span className="text-2xl md:text-3xl font-mono font-semibold text-jobfix-800 dark:text-jobfix-300">
               {item.value < 10 ? `0${item.value}` : item.value}
             </span>
           </div>
@@ -74,7 +74,7 @@ const CTA: React.FC = () => {
       <div className="container mx-auto px-4 relative">
         <div className="max-w-3xl mx-auto text-center">
           <FadeIn>
-            <div className="inline-block px-4 py-1.5 mb-6 rounded-full text-sm font-medium bg-jobfix-200 text-jobfix-800 dark:bg-jobfix-700 dark:text-white border border-jobfix-300 dark:border-jobfix-600">
+            <div className="inline-block px-4 py-1.5 mb-6 rounded-full text-sm font-medium bg-jobfix-300 text-jobfix-800 dark:bg-jobfix-700 dark:text-white border border-jobfix-300 dark:border-jobfix-600">
               Limited Early Access
             </div>
             
@@ -90,7 +90,7 @@ const CTA: React.FC = () => {
             
             <div className="bg-white dark:bg-jobfix-700 rounded-2xl p-6 md:p-8 shadow-medium border border-jobfix-200/50 dark:border-jobfix-600/30 mb-6">
               <h3 className="text-xl font-semibold mb-2">Join the waitlist & unlock exclusive features</h3>
-              <p className="text-muted-foreground dark:text-jobfix-200 mb-6">
+              <p className="text-muted-foreground dark:text-jobfix-300 mb-6">
                 Get early access and help shape the future of AI-powered job applications.
               </p>
               
