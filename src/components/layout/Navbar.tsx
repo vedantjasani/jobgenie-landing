@@ -38,21 +38,21 @@ const Navbar = () => {
               alt="JobFix.ai" 
               className="h-8 mr-2" 
             />
-            <span className="text-xl font-bold text-jobfix-800 dark:text-white">jobfix<span className="text-jobfix-500">.ai</span></span>
+            <span className="text-xl font-bold text-jobfix-600 dark:text-white">jobfix<span className="text-jobfix-300">.ai</span></span>
           </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#how-it-works" className="text-sm font-medium text-foreground/80 hover:text-jobfix-500 transition-colors">
+            <a href="#how-it-works" className="text-sm font-medium text-foreground/80 hover:text-jobfix-300 transition-colors">
               How It Works
             </a>
-            <a href="#features" className="text-sm font-medium text-foreground/80 hover:text-jobfix-500 transition-colors">
+            <a href="#features" className="text-sm font-medium text-foreground/80 hover:text-jobfix-300 transition-colors">
               Features
             </a>
-            <a href="#faq" className="text-sm font-medium text-foreground/80 hover:text-jobfix-500 transition-colors">
+            <a href="#faq" className="text-sm font-medium text-foreground/80 hover:text-jobfix-300 transition-colors">
               FAQ
             </a>
-            <Button asChild className="bg-jobfix-800 hover:bg-jobfix-700 text-white">
+            <Button asChild className="bg-jobfix-600 hover:bg-jobfix-700 text-white">
               <a href="#waitlist">Join Waitlist</a>
             </Button>
           </nav>
@@ -78,28 +78,28 @@ const Navbar = () => {
         <div className="container mx-auto px-4 py-4 space-y-4">
           <a 
             href="#how-it-works" 
-            className="block py-2 text-foreground/80 hover:text-jobfix-500 transition-colors"
+            className="block py-2 text-foreground/80 hover:text-jobfix-300 transition-colors"
             onClick={() => setMobileMenuOpen(false)}
           >
             How It Works
           </a>
           <a 
             href="#features" 
-            className="block py-2 text-foreground/80 hover:text-jobfix-500 transition-colors"
+            className="block py-2 text-foreground/80 hover:text-jobfix-300 transition-colors"
             onClick={() => setMobileMenuOpen(false)}
           >
             Features
           </a>
           <a 
             href="#faq" 
-            className="block py-2 text-foreground/80 hover:text-jobfix-500 transition-colors"
+            className="block py-2 text-foreground/80 hover:text-jobfix-300 transition-colors"
             onClick={() => setMobileMenuOpen(false)}
           >
             FAQ
           </a>
           <Button 
             asChild 
-            className="w-full bg-jobfix-800 hover:bg-jobfix-700 text-white"
+            className="w-full bg-jobfix-600 hover:bg-jobfix-700 text-white"
             onClick={() => setMobileMenuOpen(false)}
           >
             <a href="#waitlist">Join Waitlist</a>
