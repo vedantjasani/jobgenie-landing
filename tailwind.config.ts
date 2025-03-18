@@ -26,17 +26,17 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				jobfix: {
-					50: '#F6F5FA',
-					100: '#ECEAF5', // Light space cadet
-					200: '#D7D3E9',
-					300: '#9055A2', // Purpureus
-					400: '#6A5B8F',
-					500: '#4A4270', // Medium space cadet
-					600: '#2E294E', // Space cadet
-					700: '#1C1B33', // Dark space cadet
-					800: '#011638', // Oxford blue 
-					900: '#000E24',
-					950: '#000718',
+					50: '#f0f8ff',
+					100: '#e0f0ff',
+					200: '#c0e0ff',
+					300: '#80c0ff',
+					400: '#4090ff',
+					500: '#2060f0',
+					600: '#1040d0',
+					700: '#0830b0',
+					800: '#082090',
+					900: '#061870',
+					950: '#040f50',
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
@@ -155,8 +155,8 @@ export default {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-linear': 'linear-gradient(var(--tw-gradient-stops))',
 				'glass-gradient': 'linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7))',
-				'purple-gradient': 'linear-gradient(145deg, #8b5cf6, #6d28d9)',
-				'dark-purple-gradient': 'linear-gradient(145deg, #6d28d9, #231042)',
+				'blue-gradient': 'linear-gradient(145deg, #4090ff, #0830b0)',
+				'purple-gradient': 'linear-gradient(to right, #c471ed, #f64f59)',
 				'sunset-gradient': 'linear-gradient(to right, #ff416c, #ff4b2b)',
 				'ocean-gradient': 'linear-gradient(to top, #4481eb, #04befe)',
 				'grid-pattern': 'url("data:image/svg+xml,%3Csvg width=\'40\' height=\'40\' viewBox=\'0 0 40 40\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%239C92AC\' fill-opacity=\'0.03\' fill-rule=\'evenodd\'%3E%3Cpath d=\'M0 40L40 0H20L0 20M40 40V20L20 40\'/%3E%3C/g%3E%3C/svg%3E")',
