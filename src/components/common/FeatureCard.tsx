@@ -32,7 +32,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       <p className="text-muted-foreground dark:text-jobfix-200 flex-grow">{description}</p>
       
       {/* Hover indicator */}
-      <div className="w-0 h-1 bg-gradient-to-r from-jobfix-300 to-jobfix-700 mt-4 transition-all duration-300 group-hover:w-full"></div>
+      <div className="w-0 h-1 bg-gradient-to-r from-jobfix-300 to-jobfix-500 mt-4 transition-all duration-300 group-hover:w-full"></div>
     </div>
   );
 };
