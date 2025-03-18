@@ -26,17 +26,17 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				jobfix: {
-					50: '#F6F7F6',
-					100: '#EAEDEA', // Light black olive
-					200: '#D5DBD6',
-					300: '#C52184', // Red violet
-					400: '#627967',
-					500: '#4A5B50', // Medium black olive
-					600: '#334139', // Black olive
-					700: '#1E2D24', // Dark green
-					800: '#141F19', // Darker green
-					900: '#0C130F',
-					950: '#060A08',
+					50: '#F0F9F3',
+					100: '#e9f8d8', // Light yellow-green
+					200: '#d8f2b2',
+					300: '#bce279', // Medium yellow-green
+					400: '#95c623', // Yellow-green
+					500: '#7ea41e',
+					600: '#0e4749', // Midnight green
+					700: '#0a3538',
+					800: '#002626', // Dark green
+					900: '#001a1a',
+					950: '#000d0d',
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',

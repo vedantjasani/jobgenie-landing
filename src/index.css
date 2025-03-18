@@ -1,87 +1,86 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 125 5% 97%;
-    --foreground: 138 10% 10%;
+    --background: 180 100% 97%;
+    --foreground: 180 100% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 138 10% 10%;
+    --card-foreground: 180 100% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 138 10% 10%;
+    --popover-foreground: 180 100% 8%;
 
-    --primary: 138 14% 22%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 84 70% 45%;
+    --primary-foreground: 180 100% 97%;
 
-    --secondary: 140 5% 35%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 180 67% 17%;
+    --secondary-foreground: 180 100% 97%;
 
-    --muted: 120 5% 94%;
-    --muted-foreground: 138 5% 45%;
+    --muted: 180 15% 94%;
+    --muted-foreground: 180 15% 45%;
 
-    --accent: 140 5% 35%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 180 67% 17%;
+    --accent-foreground: 180 100% 97%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 180 100% 97%;
 
-    --border: 120 5% 85%;
-    --input: 120 5% 85%;
-    --ring: 138 14% 22%;
+    --border: 180 20% 85%;
+    --input: 180 20% 85%;
+    --ring: 84 70% 45%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 125 5% 97%;
-    --sidebar-foreground: 138 10% 10%;
-    --sidebar-primary: 138 14% 22%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 140 5% 35%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 120 5% 90%;
-    --sidebar-ring: 138 14% 22%;
+    --sidebar-background: 180, 100%, 97%;
+    --sidebar-foreground: 180 100% 8%;
+    --sidebar-primary: 84 70% 45%;
+    --sidebar-primary-foreground: 180 100% 8%;
+    --sidebar-accent: 180 67% 17%;
+    --sidebar-accent-foreground: 180 100% 97%;
+    --sidebar-border: 180 20% 90%;
+    --sidebar-ring: 84 70% 45%;
   }
 
   .dark {
-    --background: 138 14% 10%;
-    --foreground: 0 0% 95%;
+    --background: 180 100% 8%;
+    --foreground: 180 10% 95%;
 
-    --card: 138 14% 15%;
-    --card-foreground: 0 0% 95%;
+    --card: 180 70% 10%;
+    --card-foreground: 180 10% 95%;
 
-    --popover: 138 14% 15%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 180 70% 10%;
+    --popover-foreground: 180 10% 95%;
 
-    --primary: 0 0% 80%;
-    --primary-foreground: 138 14% 10%;
+    --primary: 84 70% 45%;
+    --primary-foreground: 180 100% 8%;
 
-    --secondary: 140 5% 35%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 180 67% 17%;
+    --secondary-foreground: 180 10% 95%;
 
-    --muted: 138 10% 20%;
-    --muted-foreground: 138 5% 80%;
+    --muted: 180 50% 15%;
+    --muted-foreground: 180 20% 80%;
 
-    --accent: 138 10% 20%;
-    --accent-foreground: 0 0% 95%;
+    --accent: 180 50% 15%;
+    --accent-foreground: 180 10% 95%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 95%;
+    --destructive-foreground: 180 10% 95%;
 
-    --border: 138 10% 20%;
-    --input: 138 10% 20%;
-    --ring: 0 0% 80%;
+    --border: 180 50% 15%;
+    --input: 180 50% 15%;
+    --ring: 84 70% 45%;
     
-    --sidebar-background: 138 14% 15%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 0 0% 80%;
-    --sidebar-primary-foreground: 138 14% 10%;
-    --sidebar-accent: 138 10% 20%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 138 10% 20%;
-    --sidebar-ring: 0 0% 80%;
+    --sidebar-background: 180 70% 10%;
+    --sidebar-foreground: 180 10% 95%;
+    --sidebar-primary: 84 70% 45%;
+    --sidebar-primary-foreground: 180 100% 8%;
+    --sidebar-accent: 180 50% 15%;
+    --sidebar-accent-foreground: 180 10% 95%;
+    --sidebar-border: 180 50% 15%;
+    --sidebar-ring: 84 70% 45%;
   }
 }
 
@@ -141,12 +140,12 @@
 
   /* Gradient text */
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-jobfix-300 to-jobfix-700;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-jobfix-500 to-jobfix-700;
   }
 
   /* Gradient buttons */
   .gradient-button {
-    @apply bg-gradient-to-r from-jobfix-300 to-jobfix-700 hover:from-jobfix-300/90 hover:to-jobfix-600 text-white transition-all duration-300;
+    @apply bg-gradient-to-r from-jobfix-500 to-jobfix-700 hover:from-jobfix-600 hover:to-jobfix-800 text-white transition-all duration-300;
   }
 
   /* Card hover effects */

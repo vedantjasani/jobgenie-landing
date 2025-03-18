@@ -24,7 +24,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       {/* Decorative background gradient */}
       <div className="absolute -top-24 -right-24 w-48 h-48 bg-jobfix-100 dark:bg-jobfix-700 rounded-full opacity-30 transition-all duration-300 group-hover:scale-110"></div>
       
-      <div className="mb-5 p-3 w-14 h-14 rounded-xl bg-gradient-to-br from-jobfix-100 to-jobfix-200 dark:from-jobfix-700 dark:to-jobfix-600 flex items-center justify-center shadow-sm">
+      <div className="mb-5 p-3 w-14 h-14 rounded-xl bg-gradient-to-br from-jobfix-200 to-jobfix-300 dark:from-jobfix-700 dark:to-jobfix-600 flex items-center justify-center text-jobfix-600 dark:text-white shadow-sm">
         <Icon size={24} className="text-jobfix-600 dark:text-white" strokeWidth={2} />
       </div>
       
@@ -32,7 +32,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       <p className="text-muted-foreground dark:text-jobfix-200 flex-grow">{description}</p>
       
       {/* Hover indicator */}
-      <div className="w-0 h-1 bg-gradient-to-r from-jobfix-300 to-jobfix-700 mt-4 transition-all duration-300 group-hover:w-full"></div>
+      <div className="w-0 h-1 bg-gradient-to-r from-jobfix-500 to-jobfix-700 mt-4 transition-all duration-300 group-hover:w-full"></div>
     </div>
   );
 };
