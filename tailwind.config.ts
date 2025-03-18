@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -25,15 +26,15 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				jobfix: {
-					50: '#f5f3ff',
-					100: '#ede9fe',
-					200: '#ddd6fe',
-					300: '#c4b5fd',
-					400: '#a78bfa',
-					500: '#8b5cf6',
-					600: '#7c3aed',
-					700: '#6d28d9',
-					800: '#231042', 
+					50: '#F0F9F3',
+					100: '#DDF8E8', // Light mint green
+					200: '#CBE3D7',
+					300: '#CDD5D1', // Light gray
+					400: '#B4A6AB', // Mauve/taupe
+					500: '#A99DA1',
+					600: '#9D9095',
+					700: '#8A7F84',
+					800: '#231042', // Keeping the dark purple for contrast 
 					900: '#1A0A37',
 					950: '#0e0520',
 				},

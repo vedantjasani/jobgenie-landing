@@ -52,7 +52,7 @@ const Testimonials: React.FC = () => {
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.3] pointer-events-none"></div>
       
       {/* Decorative floating elements */}
-      <div className="absolute -top-24 -right-24 w-96 h-96 bg-jobfix-50 rounded-full filter blur-3xl opacity-30 animate-float pointer-events-none"></div>
+      <div className="absolute -top-24 -right-24 w-96 h-96 bg-jobfix-100 rounded-full filter blur-3xl opacity-30 animate-float pointer-events-none"></div>
       <div className="absolute top-1/4 left-10 w-64 h-64 rounded-full border-2 border-dashed border-jobfix-200 opacity-20 animate-spin-slow pointer-events-none"></div>
       <div className="absolute bottom-1/3 right-20 w-40 h-40 rounded-full border border-jobfix-300 opacity-15 animate-pulse pointer-events-none"></div>
       
@@ -74,7 +74,7 @@ const Testimonials: React.FC = () => {
       {/* Star rating decorations */}
       <div className="absolute top-40 left-[25%] flex space-x-1 pointer-events-none opacity-20">
         {[1, 2, 3, 4, 5].map((star) => (
-          <div key={star} className="text-jobfix-500 text-2xl">★</div>
+          <div key={star} className="text-jobfix-400 text-2xl">★</div>
         ))}
       </div>
       
@@ -107,7 +107,7 @@ const Testimonials: React.FC = () => {
           ))}
         </div>
 
-        <div className="pt-12 border-t border-gray-100">
+        <div className="pt-12 border-t border-jobfix-100">
           <FadeIn>
             <div className="text-center mb-8">
               <h3 className="text-xl font-medium text-muted-foreground">Compatible with top job platforms</h3>
