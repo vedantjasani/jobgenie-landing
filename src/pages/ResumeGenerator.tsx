@@ -72,7 +72,7 @@ const bounceAnimation = {
     transition: {
       duration: 1.5,
       repeat: Infinity,
-      repeatType: "reverse",
+      repeatType: "reverse" as const,
     },
   },
 };
