@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { FileText, Upload, ArrowRight, FilePdf } from 'lucide-react';
+import { FileText, Upload, ArrowRight, FileIcon } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 
@@ -122,7 +122,7 @@ const ResumeGenerator = () => {
                     <div className="flex flex-col items-center justify-center gap-2 text-center">
                       {selectedFile ? (
                         <div className="flex items-center gap-2">
-                          <FilePdf className="h-8 w-8 text-jobfix-500" />
+                          <FileIcon className="h-8 w-8 text-jobfix-500" />
                           <span className="text-sm font-medium">{selectedFile.name}</span>
                         </div>
                       ) : (
