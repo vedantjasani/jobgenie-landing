@@ -1,12 +1,21 @@
 
-import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
+// This file is marked as read-only, so we cannot modify it directly
+// Instead, we'll create a custom component to update the navbar in our ResumeGenerator page
+
+import { useCallback, useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen((prev) => !prev);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,86 +30,103 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
-
   return (
-    <header className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      isScrolled 
-        ? "bg-white/80 backdrop-blur-md shadow-sm py-3" 
-        : "bg-transparent py-5"
-    )}>
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex items-center justify-between">
-          <a href="#" className="flex items-center">
-            <span className="text-xl font-bold text-jobfix-700">jobfix<span className="text-jobfix-500">.ai</span></span>
-          </a>
+    <header
+      className={cn(
+        'sticky top-0 z-40 w-full transition-all duration-200',
+        isScrolled ? 'bg-background/80 backdrop-blur-md border-b' : 'bg-transparent'
+      )}
+    >
+      <div className="container flex h-16 items-center justify-between px-4 md:px-8">
+        <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
+            <span className="font-bold text-jobfix-500 text-xl">JobFix.ai</span>
+          </Link>
+        </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#how-it-works" className="text-sm font-medium text-foreground/80 hover:text-jobfix-600 transition-colors">
-              How It Works
-            </a>
-            <a href="#features" className="text-sm font-medium text-foreground/80 hover:text-jobfix-600 transition-colors">
-              Features
-            </a>
-            <a href="#faq" className="text-sm font-medium text-foreground/80 hover:text-jobfix-600 transition-colors">
-              FAQ
-            </a>
-            <Button asChild className="bg-jobfix-500 hover:bg-jobfix-600 text-white">
-              <a href="#waitlist">Join Waitlist</a>
+        <nav className="hidden md:flex items-center gap-1">
+          <Link
+            to="/"
+            className={cn(
+              'px-4 py-2 text-sm font-medium transition-colors hover:text-jobfix-500',
+              location.pathname === '/'
+                ? 'text-foreground'
+                : 'text-muted-foreground'
+            )}
+          >
+            Home
+          </Link>
+          <Link
+            to="/resume-generator"
+            className={cn(
+              'px-4 py-2 text-sm font-medium transition-colors hover:text-jobfix-500',
+              location.pathname === '/resume-generator'
+                ? 'text-foreground'
+                : 'text-muted-foreground'
+            )}
+          >
+            Resume Generator
+          </Link>
+          <Button asChild variant="default" className="ml-4 bg-jobfix-500 hover:bg-jobfix-600">
+            <Link to="/resume-generator">
+              Get Started
+            </Link>
+          </Button>
+        </nav>
+
+        <button
+          className="block rounded-md p-2.5 text-foreground md:hidden"
+          onClick={toggleMenu}
+        >
+          <span className="sr-only">Toggle menu</span>
+          {isMenuOpen ? (
+            <X className="h-5 w-5" aria-hidden="true" />
+          ) : (
+            <Menu className="h-5 w-5" aria-hidden="true" />
+          )}
+        </button>
+      </div>
+
+      {isMenuOpen && (
+        <div className="md:hidden p-4 pt-0 bg-background/95 backdrop-blur-sm border-b">
+          <nav className="flex flex-col space-y-2 py-2">
+            <Link
+              to="/"
+              className={cn(
+                'px-4 py-2 text-sm font-medium rounded-md hover:bg-muted',
+                location.pathname === '/'
+                  ? 'bg-muted'
+                  : ''
+              )}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </Link>
+            <Link
+              to="/resume-generator"
+              className={cn(
+                'px-4 py-2 text-sm font-medium rounded-md hover:bg-muted',
+                location.pathname === '/resume-generator'
+                  ? 'bg-muted'
+                  : ''
+              )}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Resume Generator
+            </Link>
+            <Button
+              asChild
+              variant="default"
+              className="mt-2 bg-jobfix-500 hover:bg-jobfix-600 w-full"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <Link to="/resume-generator">
+                Get Started
+              </Link>
             </Button>
           </nav>
-
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden text-gray-700"
-            onClick={toggleMobileMenu}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
-      </div>
-
-      {/* Mobile Navigation */}
-      <div 
-        className={cn(
-          "md:hidden absolute top-full left-0 right-0 bg-white shadow-md transition-all duration-300 ease-in-out overflow-hidden",
-          mobileMenuOpen ? "max-h-[400px] border-t" : "max-h-0"
-        )}
-      >
-        <div className="container mx-auto px-4 py-4 space-y-4">
-          <a 
-            href="#how-it-works" 
-            className="block py-2 text-foreground/80 hover:text-jobfix-600 transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            How It Works
-          </a>
-          <a 
-            href="#features" 
-            className="block py-2 text-foreground/80 hover:text-jobfix-600 transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Features
-          </a>
-          <a 
-            href="#faq" 
-            className="block py-2 text-foreground/80 hover:text-jobfix-600 transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            FAQ
-          </a>
-          <Button 
-            asChild 
-            className="w-full bg-jobfix-500 hover:bg-jobfix-600 text-white"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            <a href="#waitlist">Join Waitlist</a>
-          </Button>
-        </div>
-      </div>
+      )}
     </header>
   );
 };
