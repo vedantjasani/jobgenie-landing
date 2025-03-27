@@ -67,6 +67,17 @@ const Navbar = () => {
           >
             Resume Generator
           </Link>
+          <Link
+            to="/create-resume"
+            className={cn(
+              'px-4 py-2 text-sm font-medium transition-colors hover:text-jobfix-500',
+              location.pathname === '/create-resume'
+                ? 'text-foreground'
+                : 'text-muted-foreground'
+            )}
+          >
+            Create Resume
+          </Link>
           <Button asChild variant="default" className="ml-4 bg-jobfix-500 hover:bg-jobfix-600">
             <Link to="/resume-generator">
               Get Started
@@ -113,6 +124,18 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Resume Generator
+            </Link>
+            <Link
+              to="/create-resume"
+              className={cn(
+                'px-4 py-2 text-sm font-medium rounded-md hover:bg-muted',
+                location.pathname === '/create-resume'
+                  ? 'bg-muted'
+                  : ''
+              )}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Create Resume
             </Link>
             <Button
               asChild
