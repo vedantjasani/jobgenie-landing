@@ -156,4 +156,28 @@
   .image-loading {
     @apply animate-pulse bg-muted rounded-lg;
   }
+  
+  /* Jobright-inspired styles */
+  .ats-score-pill {
+    @apply flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-50 to-green-100 rounded-full border-4 border-white shadow-md;
+  }
+  
+  .cta-button {
+    @apply bg-jobfix-500 hover:bg-jobfix-600 text-white font-medium rounded-full px-8 py-3 transition-all duration-300;
+  }
+  
+  .stats-card {
+    @apply bg-jobfix-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

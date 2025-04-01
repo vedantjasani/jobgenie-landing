@@ -12,7 +12,7 @@ import Footer from '@/components/layout/Footer';
 
 const Index = () => {
   useEffect(() => {
-    document.title = "JobFix.ai - Land Your Dream Job Faster with AI";
+    document.title = "JobFix.ai - Land Your Dream Job with AI Resume Builder";
   }, []);
 
   return (
