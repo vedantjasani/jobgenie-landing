@@ -12,14 +12,11 @@ import Footer from '@/components/layout/Footer';
 
 const Index = () => {
   useEffect(() => {
-    document.title = "JobFix.ai - Land Your Dream Job with AI Resume Builder";
-    
-    // Scroll to top on page load
-    window.scrollTo(0, 0);
+    document.title = "JobFix.ai - Land Your Dream Job Faster with AI";
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
       <main>
         <HeroSection />
